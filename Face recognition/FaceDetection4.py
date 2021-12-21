@@ -1,13 +1,13 @@
 import numpy as np
 import cv2
 
-face_cascade = cv2.CascadeClassifier('C:\\Users\\nikla\\OneDrive - Arcada\\Datorseende\\haarcascade_frontalface_alt.xml')
-eye_cascade = cv2.CascadeClassifier('C:\\Users\\nikla\\OneDrive - Arcada\\Datorseende\\haarcascade_eye_tree_eyeglasses.xml')
+face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')
+eye_cascade = cv2.CascadeClassifier('haarcascade_eye_tree_eyeglasses.xml')
 
-video = ("C:\\Users\\nikla\\OneDrive - Arcada\\Datorseende\\VID_2.mp4")
+video = ("") # INSERT SAMPLE VIDEO HERE
 cap = cv2.VideoCapture(video)
 rec = cv2.face.LBPHFaceRecognizer_create() 
-rec.read("C:\\Users\\nikla\\OneDrive - Arcada\\Datorseende\\trainingdata.yml")
+rec.read("trainingdata.yml")
 
 font=cv2.FONT_HERSHEY_SIMPLEX
 while 1:
